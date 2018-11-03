@@ -33,3 +33,38 @@ html {
     color: #fff; }
   .navigation__item:not(:last-child) {
     margin-right: 4rem; }
+
+.flex-container {
+  display: flex;
+  flex-direction: row; }
+
+.section-offer {
+  font-family: 'Open Sans', sans-serif;
+  color: grey; }
+  .section-offer__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 40px 5%;
+    min-height: 50vh; }
+  .section-offer__list {
+    list-style: square;
+    line-height: 3.5rem;
+    font-size: 1.7rem; }
+
+.offer__photo {
+  background: url(../../src/img/workshop.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70%;
+  width: 70%;
+  overflow: hidden; }
+
+.heading-secondary {
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 600; }
