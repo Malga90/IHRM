@@ -1,3 +1,34 @@
-body {
-    background: teal; 
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header {
+    height: 100vh;
+    background-image: url(../../src/img/1.jpg);
+    background-size: cover;
+}
+
+.navigation {
+    width: 100%;
+    height: 6rem;
+    background-color: #e97645;
+    color: #fff;
+    letter-spacing: .3rem;
+    font-family: Montserrat, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo-box {
+        font-size: 2rem;
+        margin-left: 10rem;
+    }
+
 }
