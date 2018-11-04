@@ -6,6 +6,9 @@
 html {
   font-size: 62.5%; }
 
+.bg-grey {
+  background-color: #DAD9DB; }
+
 .header {
   height: 100vh;
   background-image: url(../../src/img/1.jpg);
@@ -47,15 +50,18 @@ html {
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    padding: 40px 5%;
+    padding: 5%;
     min-height: 50vh; }
   .section-offer__list {
     list-style: square;
     line-height: 3.5rem;
     font-size: 1.7rem; }
 
+.offer__photo-box {
+  display: flex;
+  justify-content: center; }
+
 .offer__photo {
-  background: url(../../src/img/workshop.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

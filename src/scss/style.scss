@@ -8,6 +8,10 @@ html {
     font-size: 62.5%;
 }
 
+.bg-grey {
+    background-color: #DAD9DB;
+}
+
 .header {
     height: 100vh;
     background-image: url(../../src/img/1.jpg);
@@ -62,13 +66,14 @@ html {
 .section-offer {
     font-family: 'Open Sans', sans-serif;
     color: grey;
+
     &__item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         width: 50%;
-        padding: 40px 5%;
+        padding: 5%;
         min-height: 50vh;
     }
 
@@ -79,14 +84,19 @@ html {
     }
 }
 
+.offer__photo-box {
+    display: flex;
+    justify-content: center;
+}
+
 .offer__photo {
-    background: url(../../src/img/workshop.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 70%;
     width: 70%;
     overflow: hidden;
+
 }
 
 .heading-secondary {
