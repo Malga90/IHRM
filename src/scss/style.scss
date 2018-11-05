@@ -63,7 +63,7 @@ html {
     flex-direction: row;
 }
 
-.section-offer {
+.section-offer, .section-clients {
     font-family: 'Open Sans', sans-serif;
     color: grey;
 
@@ -108,3 +108,48 @@ html {
     text-transform: uppercase;
     font-weight: 600; 
 }
+
+.section-clients-heading {
+    height: 8rem;
+    margin: 3%;
+    padding-top: 2%;
+
+}
+.heading-section-clients, .paragraph {
+    text-align: center;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+
+.grid-container {
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(15rem, min-content));
+    grid-gap: 10rem;
+    padding: 5%;
+}
+
+.section-client__wrapper {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8%;
+    
+}
+.heading-tertiary {
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    color: #e97645; 
+    margin-bottom: 2rem; 
+}
+
+.section-client__list {
+    font-size: 1.6rem; 
+    text-align: center;
+    list-style-type: none;
+}
+
