@@ -95,10 +95,13 @@ html {
   grid-template-rows: repeat(3, minmax(15rem, min-content));
   grid-gap: 10rem;
   padding: 5%; }
+  .grid-container > * {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
 
 .section-client__wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 8%; }
 
@@ -111,4 +114,5 @@ html {
 .section-client__list {
   font-size: 1.6rem;
   text-align: center;
-  list-style-type: none; }
+  list-style-type: none;
+  align-self: center; }
