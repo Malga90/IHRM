@@ -121,7 +121,7 @@ html {
 }
 
 .paragraph {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .grid-container {
@@ -130,10 +130,11 @@ html {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, minmax(15rem, min-content));
     grid-gap: 10rem;
-    padding: 5%;
+    padding: 3% 5%;
 
     & > * {
-        box-shadow: 0 1.5rem 4rem rgba(0,0,0, .3); 
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0, .3);
+        border-radius: 10px; 
     }
 }
 
