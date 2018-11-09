@@ -163,16 +163,71 @@ html {
 
 .section-contact {
     padding: 5%;
+    font-family: 'Open Sans', sans-serif;
 
     .heading-secondary {
         text-align: center;
-        font-family: 'Open Sans', sans-serif;
         color: grey;
-        letter-spacing: 1.5px;
+        letter-spacing: 3px;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        padding: 2% 0;
+        &:not(:first-child) {
+            line-height: 4rem;
+        }
+    }
+
+    &__data {
+        color: grey;
+        font-size: 1.5rem;
+    }
+
+    &__paragraph {
+        font-weight: 700;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+}
+
+.section-contact__form {
+    width: 65%;
+}
+
+.form {
+    &__group {
+        display: flex;
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        color: lightgrey;
+
+    }
+
+    &__input {
+        width: 48%;
+        padding: 1%;
+        margin-bottom: 2rem;
+        border: 1px solid grey;
+        border-radius: 4px;
+        
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 14rem;
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 1%;
+        resize: none;
+        font-family: 'Open Sans', sans-serif;
     }
 }
