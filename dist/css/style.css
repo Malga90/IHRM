@@ -117,3 +117,14 @@ html {
   text-align: center;
   list-style-type: none;
   align-self: center; }
+
+.section-contact {
+  padding: 5%; }
+  .section-contact .heading-secondary {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    letter-spacing: 1.5px; }
+  .section-contact__wrapper {
+    display: flex;
+    justify-content: space-between; }

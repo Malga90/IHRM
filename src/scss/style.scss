@@ -160,3 +160,19 @@ html {
     align-self: center;
 }
 
+
+.section-contact {
+    padding: 5%;
+
+    .heading-secondary {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: grey;
+        letter-spacing: 1.5px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
