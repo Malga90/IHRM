@@ -167,3 +167,18 @@ html {
   padding: 1%;
   resize: none;
   font-family: 'Open Sans', sans-serif; }
+
+.section-contact__button {
+  display: flex;
+  justify-content: flex-end; }
+  .section-contact__button .button {
+    font-size: 1.6rem;
+    padding: 1% 2%;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: #e97645;
+    background-color: #fff;
+    letter-spacing: 2px; }
+    .section-contact__button .button:hover {
+      background-color: lightgray;
+      color: grey; }
