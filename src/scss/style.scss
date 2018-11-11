@@ -191,8 +191,20 @@ html {
 
     &__list {
         list-style-type: none;
+        
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        color: #e97645;
+        margin-right: .6rem;
     }
 }
+
 
 .section-contact__form {
     width: 65%;
@@ -223,7 +235,7 @@ html {
 
     &__textarea {
         width: 100%;
-        height: 10rem;
+        height: 11rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
         padding: 1%;
