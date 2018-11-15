@@ -58,6 +58,12 @@ html {
 
 }
 
+.fixed-nav .navigation{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
 .heading-primary {
     font-size: 3rem;
     font-family: 'Open Sans', sans-serif;
@@ -79,16 +85,17 @@ html {
    align-items: center;
    height: 100%;
 
-   &__icon {
+   &__button {
        color: #e97645;
        font-size: 3.5rem;
+       cursor: pointer;
    }
 
    &__items {
        font-size: 1.9rem;
        color: #5D5D5D;
        font-family: 'Open Sans', sans-serif;
-       width: 35%;
+       width: 30%;
 
    }
 
@@ -97,7 +104,7 @@ html {
    }
 
    &__text {
-       line-height: 3rem;
+       line-height: 3.1rem;
        text-align: center;
    }
 }
@@ -213,6 +220,12 @@ html {
         text-align: center;
         color: grey;
         letter-spacing: 3px;
+        transition: all .3s;
+
+        &:hover {
+            color: #e97645;
+            letter-spacing: 5px;
+        }
     }
 
     &__wrapper {
@@ -300,6 +313,7 @@ html {
         color: #e97645;
         background-color: #fff;
         letter-spacing: 2px;
+        transition: all .5s;
 
         &:hover {
             background-color: lightgray;
@@ -317,6 +331,6 @@ html {
 
     &__icon {
         color: #e97645;
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 }
