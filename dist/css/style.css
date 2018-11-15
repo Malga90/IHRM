@@ -38,7 +38,7 @@ html {
     margin-right: 4rem; }
 
 .heading-primary {
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-family: 'Open Sans', sans-serif;
   color: #e97645;
   text-align: center;
@@ -49,6 +49,25 @@ html {
   width: 100%;
   height: 50vh;
   padding: 5%; }
+
+.slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%; }
+  .slider__icon {
+    color: #e97645;
+    font-size: 3.5rem; }
+  .slider__items {
+    font-size: 1.9rem;
+    color: #5D5D5D;
+    font-family: 'Open Sans', sans-serif;
+    width: 35%; }
+  .slider__item--2, .slider__item--3 {
+    display: none; }
+  .slider__text {
+    line-height: 3rem;
+    text-align: center; }
 
 .flex-container {
   display: flex;
