@@ -1,15 +1,11 @@
-console.log('Gruszka jest malutka');
-
-
-
 // Sticky navigation
 
 const nav = document.querySelector('.navigation');
 const navTop = nav.offsetTop;
 
 function stickyNavigation() {
-    console.log('navTop = ' + navTop);
-    console.log('scrollY = ' + window.scrollY);
+    // console.log('navTop = ' + navTop);
+    // console.log('scrollY = ' + window.scrollY);
 
     if  (window.scrollY >= navTop) {
         document.body.style.paddingTop = nav.OffsetHeight + 'px';
@@ -22,5 +18,7 @@ function stickyNavigation() {
 
 window.addEventListener('scroll', stickyNavigation);
 
+
+// Smooth scroll
 
 
