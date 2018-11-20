@@ -19,6 +19,7 @@ function stickyNavigation() {
 window.addEventListener('scroll', stickyNavigation);
 
 
-// Smooth scroll
+// Scroll Spy
+ 
 
 

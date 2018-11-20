@@ -22,7 +22,7 @@ html {
   height: 6rem;
   padding: 0 10rem;
   background-color: #e97645;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: .3rem;
   font-family: Montserrat, sans-serif;
   display: flex;
@@ -30,15 +30,23 @@ html {
   align-items: center; }
   .navigation__logo-box {
     font-size: 2.2rem; }
+    .navigation__logo-box:hover {
+      color: #fff; }
   .navigation__list {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     list-style: none;
     display: flex; }
-  .navigation__link:link, .navigation__link:visited {
-    text-decoration: none;
-    color: #fff; }
+  .navigation__link {
+    padding-bottom: .7rem; }
+    .navigation__link:link, .navigation__link:visited {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.8); }
+    .navigation__link:hover {
+      color: #fff;
+      font-weight: bold;
+      border-bottom: 2px solid #fff; }
   .navigation__item:not(:last-child) {
-    margin-right: 4rem; }
+    margin-right: 6rem; }
 
 .fixed-nav .navigation {
   position: fixed;
