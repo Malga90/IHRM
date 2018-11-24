@@ -4,8 +4,6 @@
    box-sizing: border-box; 
 }
 
-
-
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -40,6 +38,12 @@ html {
 
     &__logo-box {
         font-size: 2.2rem;
+
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        color:rgba(255, 255, 255, 0.7);
 
         &:hover {
             color: #fff;
@@ -243,7 +247,7 @@ html {
 
 
 .section-contact {
-    padding: 5%;
+    padding: 7% 9%;
     font-family: 'Open Sans', sans-serif;
 
     .heading-secondary {
@@ -354,7 +358,7 @@ html {
 
 .footer {
     width: 100%;
-    height: 18rem;
+    height: 23rem;
     display: flex;
     justify-content: center;
     align-items: center;
