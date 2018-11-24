@@ -91,10 +91,10 @@ html {
   display: flex;
   flex-direction: row; }
 
-.section-offer, .section-clients {
+.section-offer {
   font-family: 'Open Sans', sans-serif;
   color: grey; }
-  .section-offer__item, .section-clients__item {
+  .section-offer__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,7 +102,7 @@ html {
     width: 50%;
     padding: 5%;
     min-height: 50vh; }
-  .section-offer__list, .section-clients__list {
+  .section-offer__list {
     list-style: square;
     line-height: 3.5rem;
     font-size: 1.7rem; }
@@ -127,10 +127,13 @@ html {
   text-transform: uppercase;
   font-weight: 600; }
 
+.section-clients {
+  font-family: 'Open Sans', sans-serif;
+  color: grey;
+  padding: 5%; }
+
 .section-clients-heading {
-  height: 8rem;
-  margin: 3%;
-  padding-top: 2%; }
+  height: 8rem; }
 
 .heading-section-clients, .paragraph {
   text-align: center; }
@@ -143,8 +146,8 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, minmax(15rem, min-content));
-  grid-gap: 10rem;
-  padding: 3% 5% 6%; }
+  grid-gap: 8rem;
+  padding: 3% 5% 0; }
   .grid-container > * {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 10px; }
