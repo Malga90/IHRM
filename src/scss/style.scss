@@ -13,6 +13,8 @@ html {
     background-color: #DAD9DB;
 }
 
+// Header section 
+
 .header {
     height: 100vh;
     background-image: url(../../src/img/1.jpg);
@@ -33,12 +35,10 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     
 
     &__logo-box {
         font-size: 2.2rem;
-
     }
 
     &__logo-link {
@@ -56,8 +56,7 @@ html {
         list-style: none; 
 
         display: flex;
-        
-        
+         
     }
 
     &__link {
@@ -73,9 +72,7 @@ html {
             color: #fff;  
             font-weight: bold;
             border-bottom: 2px solid #fff;    
-        }
-
-        
+        } 
     }
 
     &__item {
@@ -83,11 +80,7 @@ html {
         &:not(:last-child) {
             margin-right: 6rem;
         }
-
-        
-
     }
-
 }
 
 .fixed-nav .navigation{
@@ -255,6 +248,7 @@ html {
         color: grey;
         letter-spacing: 3px;
         transition: all .3s;
+        
 
         &:hover {
             color: #e97645;

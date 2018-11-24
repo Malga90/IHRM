@@ -4,9 +4,6 @@ const nav = document.querySelector('.navigation');
 const navTop = nav.offsetTop;
 
 function stickyNavigation() {
-    // console.log('navTop = ' + navTop);
-    // console.log('scrollY = ' + window.scrollY);
-
     if  (window.scrollY >= navTop) {
         document.body.style.paddingTop = nav.OffsetHeight + 'px';
         document.body.classList.add('fixed-nav');
@@ -18,6 +15,7 @@ function stickyNavigation() {
 
 window.addEventListener('scroll', stickyNavigation);
 
+// Slider
 
 
 
