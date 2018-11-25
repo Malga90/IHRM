@@ -230,8 +230,8 @@ html {
 
 .slider-dots-button {
     background: transparent;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border: 0;
     text-indent:-999px;
     overflow: hidden;
@@ -242,19 +242,19 @@ html {
 .slider-dots-button:before {
     content:'';
     position: absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background: transparent;
-    width:0.9rem;
-    height:0.9rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
-    transition:0.5s all;
-    box-shadow:inset 0 0 0 2px rgba(255,255,255,0.5);
+    transition: 0.5s all;
+    box-shadow: inset 0 0 0 2px rgba(233,118,69,0.4);
 }
 
 .slider-dots-element-active .slider-dots-button:before {
-    background: #fff;
+    background: #e97645;;
     transform: translate(-50%, -50%) scale(1.2);
 }
 
