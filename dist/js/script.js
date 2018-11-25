@@ -113,6 +113,8 @@ Slider.prototype.createPrevNext = function() {
     this.prev.innerText = this.options.prevText;
     this.prev.classList.add('slider-button');
     this.prev.classList.add('slider-button-prev');
+    this.prev.classList.add('icon');
+    this.prev.classList.add('ion-md-arrow-round-back');
     this.prev.addEventListener('click', this.slidePrev.bind(this));
 
     this.next = document.createElement('button');
@@ -120,6 +122,8 @@ Slider.prototype.createPrevNext = function() {
     this.next.innerText = this.options.nextText;
     this.next.classList.add('slider-button');
     this.next.classList.add('slider-button-next');
+    this.next.classList.add('icon');
+    this.next.classList.add('ion-md-arrow-round-forward');
     this.next.addEventListener('click', this.slideNext.bind(this));
 
     const nav = document.createElement('div');

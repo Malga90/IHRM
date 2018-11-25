@@ -109,7 +109,7 @@ html {
 }
 
 
-// Classes for JS
+
 .slider {
     position: relative;
 }
@@ -195,7 +195,6 @@ html {
 }
 .slider-button-prev:before,
 .slider-button-next:before {
-    content:'<';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,9 +208,8 @@ html {
     color: #e97645;
     text-indent: 0;
 }
-.slider-button-next:before {
-    content: '>';
-}
+
+
 
 
 .slider-dots {

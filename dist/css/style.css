@@ -146,7 +146,6 @@ html {
 
 .slider-button-prev:before,
 .slider-button-next:before {
-  content: '<';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,9 +158,6 @@ html {
   font-weight: 500;
   color: #e97645;
   text-indent: 0; }
-
-.slider-button-next:before {
-  content: '>'; }
 
 .slider-dots {
   z-index: 2;
