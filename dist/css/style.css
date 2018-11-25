@@ -67,14 +67,13 @@ html {
 
 .section-about {
   width: 100%;
-  height: 50vh;
   padding: 5%; }
 
 .slider {
   position: relative; }
 
 .slider-slides-cnt {
-  height: 100%;
+  height: 30vh;
   position: relative; }
 
 .slider-slide {
@@ -94,17 +93,17 @@ html {
   z-index: 1; }
 
 .slider .element-text {
-  color: #fff;
   position: relative;
   left: -3rem;
   opacity: 0;
-  font-size: 1.9rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
   padding-left: 4rem;
   padding-right: 4rem;
   text-align: center;
-  color: #5D5D5D;
+  color: grey;
   font-family: 'Open Sans', sans-serif;
-  max-width: 60%; }
+  max-width: 45%; }
 
 .slider-slide {
   opacity: 0;
@@ -131,7 +130,7 @@ html {
   top: 0;
   width: 4rem;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: transparent;
   border: 0;
   text-indent: -999px;
   overflow: hidden; }
@@ -155,8 +154,9 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #e97645;
   text-indent: 0; }
 
 .slider-button-next:before {

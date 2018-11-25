@@ -103,39 +103,9 @@ html {
 
 .section-about {
     width: 100%;
-    height: 50vh; 
     padding: 5%;
 }
 
-// .slider {
-//    display: flex;
-//    justify-content: space-around;
-//    align-items: center;
-//    height: 100%;
-
-//    &__button {
-//        color: #e97645;
-//        font-size: 3.5rem;
-//        cursor: pointer;
-//    }
-
-//    &__items {
-//        font-size: 1.9rem;
-//        color: #5D5D5D;
-//        font-family: 'Open Sans', sans-serif;
-//        width: 30%;
-
-//    }
-
-//    &__item--2, &__item--3 {
-//        display: none;
-//    }
-
-//    &__text {
-//        line-height: 3.1rem;
-//        text-align: center;
-//    }
-// }
 
 // Classes for JS
 .slider {
@@ -143,21 +113,21 @@ html {
 }
 
 .slider-slides-cnt {
-    height: 100%;
+    height: 30vh; 
     position: relative; 
 }
 
 .slider-slide {
     position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity:0;
+    opacity: 0;
     z-index: 0;
 }
 
@@ -166,27 +136,27 @@ html {
 }
 
 .slider .element-text {
-    color:#fff;
     position: relative;
-    left:-3rem;
-    opacity:0;
-    font-size:1.9rem;
-    padding-left:4rem;
-    padding-right:4rem;
+    left: -3rem;
+    opacity: 0;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     text-align: center;
-    color: #5D5D5D;
+    color: grey;
     font-family: 'Open Sans', sans-serif;
-    max-width:60%;
+    max-width: 45%;
 }
 
 .slider-slide {
     opacity: 0;
-    transition:0.4s all;
+    transition: 0.4s all;
 }
 
 .slider .element-text {
-    left:-3rem;
-    opacity:0;
+    left: -3rem;
+    opacity: 0;
     transition: 2s 1s left, 2s 1s opacity;
 }
 
@@ -195,8 +165,8 @@ html {
 }
 
 .slider-slide-active .element-text {
-    left:0;
-    opacity:1;
+    left: 0;
+    opacity: 1;
 }
 
 .slider-button-prev,
@@ -204,18 +174,18 @@ html {
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    left:0;
-    top:0;
-    width:4rem;
-    height:100%;
-    background: rgba(0,0,0,0.1);
-    border:0;
-    text-indent:-999px;
-    overflow:hidden;
+    left: 0;
+    top: 0;
+    width: 4rem;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    text-indent: -999px;
+    overflow: hidden;
 }
 .slider-button-next {
-    left:auto;
-    right:0;
+    left: auto;
+    right: 0;
 }
 .slider-button-prev:focus,
 .slider-button-next:focus {
@@ -228,12 +198,13 @@ html {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    font-size:2rem;
-    color:#fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #e97645;
     text-indent: 0;
 }
 .slider-button-next:before {
@@ -244,23 +215,24 @@ html {
 .slider-dots {
     z-index: 2;
     position: absolute;
-    left:0;
-    bottom:1rem;
-    margin:0;
-    padding:0;
-    width:100%;
+    left: 0;
+    bottom: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    list-style:none;
+    list-style: none;
 }
 .slider-dots-element {
+    
 }
 
 .slider-dots-button {
     background: transparent;
-    width:2rem;
-    height:2rem;
-    border:0;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
     text-indent:-999px;
     overflow: hidden;
     cursor: pointer;
@@ -283,7 +255,7 @@ html {
 
 .slider-dots-element-active .slider-dots-button:before {
     background: #fff;
-    transform:translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .slider-dots-button:focus {
