@@ -35,6 +35,10 @@ html {
         font-size: 50%;
     }
     
+    @include respond(phone) {
+        font-size: 40%;
+    }
+    
     @include respond(big-desktop) {
         font-size: 75%;
     }
@@ -67,6 +71,14 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(tab-port) {
+        padding: 0 5rem;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
     
 
     &__logo-box {
@@ -111,7 +123,12 @@ html {
         
         &:not(:last-child) {
             margin-right: 6rem;
+
+            @include respond(tab-port) {
+                margin-right: 4rem;
+            }
         }
+        
     }
 }
 

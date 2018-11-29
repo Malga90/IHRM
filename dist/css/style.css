@@ -12,6 +12,9 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -38,6 +41,12 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 56.25em) {
+    .navigation {
+      padding: 0 5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation {
+      display: none; } }
   .navigation__logo-box {
     font-size: 2.2rem; }
   .navigation__logo-link {
@@ -61,6 +70,9 @@ html {
       border-bottom: 2px solid #fff; }
   .navigation__item:not(:last-child) {
     margin-right: 6rem; }
+    @media (max-width: 56.25em) {
+      .navigation__item:not(:last-child) {
+        margin-right: 4rem; } }
 
 .fixed-nav .navigation {
   position: fixed;
