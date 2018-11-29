@@ -452,6 +452,8 @@ html {
     align-self: center;
 }
 
+// Contact section 
+
 
 .section-contact {
     padding: 7% 9%;
@@ -477,11 +479,23 @@ html {
         &:not(:first-child) {
             line-height: 4rem;
         }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        
+        }
     }
 
     &__data {
         color: grey;
-        font-size: 1.5rem;
+        font-size: 1.5rem; 
+
+        @include respond(tab-port) {
+            padding-bottom: 10%;
+        
+        }
+
     }
 
     &__paragraph {
@@ -504,7 +518,6 @@ html {
     }
 }
 
-
 .section-contact__form {
     width: 65%;
 }
@@ -517,6 +530,10 @@ html {
         font-size: 1.4rem;
         color: lightgrey;
 
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
     }
 
     &__input {
@@ -525,6 +542,14 @@ html {
         margin-bottom: 2rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            font-size: 1.7rem;
+        }
         
     }
 
@@ -546,6 +571,11 @@ html {
 .section-contact__button {
     display: flex;
     justify-content: flex-end;
+
+    @include respond(tab-port) {
+        justify-content: center;
+        padding-top: 5%;
+    }
 
     .button {
         font-size: 1.6rem;

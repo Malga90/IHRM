@@ -352,9 +352,16 @@ html {
     padding: 2% 0; }
     .section-contact__wrapper:not(:first-child) {
       line-height: 4rem; }
+    @media (max-width: 56.25em) {
+      .section-contact__wrapper {
+        flex-direction: column;
+        align-items: center; } }
   .section-contact__data {
     color: grey;
     font-size: 1.5rem; }
+    @media (max-width: 56.25em) {
+      .section-contact__data {
+        padding-bottom: 10%; } }
   .section-contact__paragraph {
     font-weight: 700; }
   .section-contact__list {
@@ -375,6 +382,9 @@ html {
   justify-content: space-between;
   font-size: 1.4rem;
   color: lightgrey; }
+  @media (max-width: 56.25em) {
+    .form__group {
+      flex-direction: column; } }
 
 .form__input {
   width: 48%;
@@ -382,6 +392,12 @@ html {
   margin-bottom: 2rem;
   border: 1px solid #BABABA;
   border-radius: 4px; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
+  @media (max-width: 37.5em) {
+    .form__input {
+      font-size: 1.7rem; } }
 
 .form__label {
   display: none; }
@@ -398,6 +414,10 @@ html {
 .section-contact__button {
   display: flex;
   justify-content: flex-end; }
+  @media (max-width: 56.25em) {
+    .section-contact__button {
+      justify-content: center;
+      padding-top: 5%; } }
   .section-contact__button .button {
     font-size: 1.6rem;
     padding: 1% 2%;
