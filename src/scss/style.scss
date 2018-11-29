@@ -155,14 +155,12 @@ html {
     padding: 5%;
 }
 
-
-
 .slider {
     position: relative;
 }
 
 .slider-slides-cnt {
-    height: 30vh; 
+    height: 30rem; 
     position: relative; 
 }
 
@@ -196,6 +194,18 @@ html {
     color: grey;
     font-family: 'Open Sans', sans-serif;
     max-width: 45%;
+
+    @include respond(tab-land) {
+        max-width: 60%;
+    }
+
+    @include respond(tab-port) {
+        max-width: 70%;
+    }
+
+    @include respond(phone) {
+        max-width: 90%;
+    }
 }
 
 .slider-slide {
@@ -231,15 +241,22 @@ html {
     border: 0;
     text-indent: -999px;
     overflow: hidden;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
+
 .slider-button-next {
     left: auto;
     right: 0;
 }
+
 .slider-button-prev:focus,
 .slider-button-next:focus {
     outline: none;
 }
+
 .slider-button-prev:before,
 .slider-button-next:before {
     display: flex;

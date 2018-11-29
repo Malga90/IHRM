@@ -95,7 +95,7 @@ html {
   position: relative; }
 
 .slider-slides-cnt {
-  height: 30vh;
+  height: 30rem;
   position: relative; }
 
 .slider-slide {
@@ -126,6 +126,15 @@ html {
   color: grey;
   font-family: 'Open Sans', sans-serif;
   max-width: 45%; }
+  @media (max-width: 75em) {
+    .slider .element-text {
+      max-width: 60%; } }
+  @media (max-width: 56.25em) {
+    .slider .element-text {
+      max-width: 70%; } }
+  @media (max-width: 37.5em) {
+    .slider .element-text {
+      max-width: 90%; } }
 
 .slider-slide {
   opacity: 0;
@@ -156,6 +165,10 @@ html {
   border: 0;
   text-indent: -999px;
   overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .slider-button-prev,
+    .slider-button-next {
+      display: none; } }
 
 .slider-button-next {
   left: auto;
