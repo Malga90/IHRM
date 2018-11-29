@@ -238,6 +238,12 @@ html {
 .flex-container {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 37.5em) {
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
 
 .section-offer {
   font-family: 'Open Sans', sans-serif;
@@ -250,6 +256,15 @@ html {
     width: 50%;
     padding: 5%;
     min-height: 50vh; }
+    @media (max-width: 37.5em) {
+      .section-offer__item {
+        width: 90%;
+        padding: 10%;
+        min-height: 40vh;
+        align-items: stretch; } }
+  @media (max-width: 37.5em) {
+    .section-offer__hidden {
+      display: none; } }
   .section-offer__list {
     list-style: square;
     line-height: 3.5rem;
@@ -273,7 +288,8 @@ html {
   font-size: 2.6rem;
   margin-bottom: 3rem;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  text-align: center; }
 
 .section-clients {
   font-family: 'Open Sans', sans-serif;
