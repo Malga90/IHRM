@@ -6,6 +6,15 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .bg-grey {
   background-color: #DAD9DB; }
@@ -97,7 +106,7 @@ html {
   position: relative;
   left: -3rem;
   opacity: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 3.2rem;
   padding-left: 4rem;
   padding-right: 4rem;
