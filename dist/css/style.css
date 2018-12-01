@@ -297,7 +297,11 @@ html {
   padding: 5%; }
 
 .section-clients-heading {
-  height: 8rem; }
+  height: 8rem;
+  margin-bottom: 3%; }
+  @media (max-width: 56.25em) {
+    .section-clients-heading {
+      margin-bottom: 5%; } }
 
 .heading-section-clients, .paragraph {
   text-align: center; }
@@ -311,10 +315,24 @@ html {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, minmax(15rem, min-content));
   grid-gap: 8rem;
-  padding: 3% 5% 0; }
+  padding: 3% 5%; }
   .grid-container > * {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 10px; }
+  @media (max-width: 75em) {
+    .grid-container {
+      grid-gap: 4rem;
+      padding: 2%; } }
+  @media (max-width: 56.25em) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, minmax(15rem, min-content));
+      grid-gap: 3rem; } }
+  @media (max-width: 37.5em) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, minmax(15rem, min-content));
+      grid-gap: 4rem; } }
 
 .section-client__wrapper {
   display: flex;
