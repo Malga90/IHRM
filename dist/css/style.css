@@ -339,7 +339,15 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 8%; }
+  padding: 8%;
+  transition: all .3s; }
+  .section-client__wrapper:hover {
+    border: 2px solid #e97645;
+    transform: scale(1.1); }
+    @media (max-width: 37.5em) {
+      .section-client__wrapper:hover {
+        border: none;
+        transform: none; } }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -376,7 +384,7 @@ html {
         align-items: center; } }
   .section-contact__data {
     color: grey;
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
     @media (max-width: 56.25em) {
       .section-contact__data {
         padding-bottom: 10%; } }

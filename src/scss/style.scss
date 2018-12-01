@@ -434,6 +434,7 @@ html {
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
         border-radius: 10px; 
     }
+
     @include respond(tab-land) {
         grid-gap: 4rem;
         padding: 2%;
@@ -458,6 +459,17 @@ html {
     justify-content: center;
     flex-direction: column;
     padding: 8%;
+    transition: all .3s;
+
+    &:hover {
+        border: 2px solid #e97645;
+        transform: scale(1.1);
+
+        @include respond(phone) {
+            border: none;
+            transform: none;
+        }
+    }
     
 }
 .heading-tertiary {
@@ -511,13 +523,12 @@ html {
 
     &__data {
         color: grey;
-        font-size: 1.5rem; 
+        font-size: 1.6rem; 
 
         @include respond(tab-port) {
             padding-bottom: 10%;
         
         }
-
     }
 
     &__paragraph {
@@ -564,7 +575,6 @@ html {
         margin-bottom: 2rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
-        // font-size: 2rem;
 
         @include respond(tab-port) {
             width: 100%;
