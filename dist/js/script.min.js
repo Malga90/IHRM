@@ -170,3 +170,20 @@ const slide = new Slider('#slider', {
     prevText : "Poprzedni",
     nextText : "Następny"
 });
+
+// Form validation 
+
+const ValidateForm = function(form, options) {
+    
+    const defaultOptions = {
+        classError : 'error'
+    }
+
+    this.form = form;
+
+    this.options = Object.assing({}, defaultOptions, options);
+
+
+    this.form.setAttribute('novalidate', 'novalidate');
+};
+

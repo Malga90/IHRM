@@ -302,18 +302,19 @@
                     </ul>
                 </div>
                 <div class="section-contact__form">
-                    <form action="#" class="form">
+                    <form action="#" class="form" method="post">
                         <div class="form__group">
-                            <input type="text" class="form__input" id='name' placeholder='Imie i nazwisko'>
+                            <input type="text" class="form__input" id='name' required placeholder='Imie i nazwisko'>
                             <label for="name" class="form__label">Imię i nazwisko</label>
 
-                            <input type="email" class="form__input" id='email' placeholder='Adres email'>
+                            <input type="email" class="form__input" id='email' required placeholder='Adres email'>
                             <label for="email" class="form__label">Adres email</label>
                         </div>
                         <div class="form__group">
                             <textarea name="comments" 
                                         id="comments" 
-                                        class="form__textarea" 
+                                        class="form__textarea"
+                                        required 
                                         placeholder="Napisz, która oferta Cię interesuje"
                                         >
                             </textarea>
