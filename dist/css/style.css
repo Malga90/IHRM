@@ -456,6 +456,20 @@ html {
       background-color: lightgray;
       color: grey; }
 
+form .error {
+  color: #DB083E; }
+
+.form .error input[type=text],
+.form .error input[type="email"],
+.form .error textarea {
+  color: #DB083E;
+  border-color: #DB083E;
+  background-position: calc(100% - 10px) center;
+  padding-right: 40px; }
+
+.form .error textarea {
+  background-position: calc(100% - 10px) 10px; }
+
 .footer {
   width: 100%;
   height: 23rem;
