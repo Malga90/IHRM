@@ -173,6 +173,8 @@ const slide = new Slider('#slider', {
 
 
 
+
+
 // Form validation 
 
 const FormValidate = function(form, options) {
