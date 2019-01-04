@@ -177,138 +177,120 @@ const slide = new Slider('#slider', {
 
 // Form validation 
 
-const FormValidate = function(form, options) {
-    const defaultOptions = {
-        classError : 'error'
-    }
+{
+    const form = document.querySelector('#contactForm');
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
 
-    this.form = form;
-    this.options = Object.assign({}, defaultOptions, options);
+    //wyłączamy domyślną walidację
+    form.setAttribute('novalidate', true);
 
-    
-    this.form.setAttribute('novalidate', 'novalidate');
+    const displayFieldError = function(elem) {
+        const fieldRow = elem.closest('.form-row');
+        const fieldError = fieldRow.querySelector('.field-error');
+        if (fieldError === null) {
+            const errorText = elem.dataset.error;
+            const divError = document.createElement('div');
+            divError.classList.add('field-error');
+            divError.innerText = errorText;
+            fieldRow.appendChild(divError);
+        }
+    };
 
-    this.prepareElements();
-    this.bindSubmit();
-};
+    const hideFieldError = function(elem) {
+        const fieldRow = elem.closest('.form-row');
+        const fieldError = fieldRow.querySelector('.field-error');
+        if (fieldError !== null) {
+            fieldError.remove();
+        }
+    };
 
-FormValidate.prototype.prepareElements = function() {
-    const elements = this.form.querySelectorAll('[required]');
-
-    [].forEach.call(elements, function(element) {
-        
-        if (element.nodeName.toUpperCase() === 'INPUT') {
-            const type = element.type.toUpperCase();
-
-            
-            if (type === 'TEXT') {
-                element.addEventListener('input', function(e) {
-                    this.testInputText(e.target);
-                }.bind(this));
+    [...inputs].forEach(elem => {
+        elem.addEventListener('input', function() {
+            if (!this.checkValidity()) {
+                this.classList.add('error');
+            } else {
+                this.classList.remove('error');
+                hideFieldError(this);
             }
-            if (type === 'EMAIL') {
-                element.addEventListener('input', function(e) {
-                    this.testInputEmail(e.target);
-                }.bind(this));
+        });
+
+
+    });
+
+    const checkFieldsErrors = function(elements) {
+        //ustawiamy zmienną na true. Następnie robimy pętlę po wszystkich polach
+        //jeżeli któreś z pól jest błędne, przełączamy zmienną na false.
+        let fieldsAreValid = true;
+
+        [...elements].forEach(elem => {
+            if (elem.checkValidity()) {
+                hideFieldError(elem);
+                elem.classList.remove('error');
+            } else {
+                displayFieldError(elem);
+                elem.classList.add('error');
+                fieldsAreValid = false;
             }
+        });
 
-        }
-        if (element.nodeName.toUpperCase() === 'TEXTAREA') {
-            element.addEventListener('input', function(e) {
-                this.testInputText(e.target);
-            }.bind(this));
-        }
-        
-    }, this);
-};
+        return fieldsAreValid;
+    };
 
-FormValidate.prototype.showFieldValidation = function(input, inputIsValid) {
-    if (!inputIsValid) {
-        input.parentElement.classList.add(this.options.classError);
-    } else {
-        input.parentElement.classList.remove(this.options.classError);
-    }
-};
-
-FormValidate.prototype.testInputText = function(input) {
-    let inputIsValid = true;
-    const pattern = input.getAttribute('pattern');
-
-    if (pattern !== null) {
-        const reg = new RegExp(pattern, 'gi');
-        if (!reg.test(input.value)) {
-            inputIsValid = false;
-        }
-    } else {
-        if (input.value === '') {
-            inputIsValid = false;
-        }
-    }
-
-    if (inputIsValid) {
-        this.showFieldValidation(input, true);
-        return true;
-    } else {
-        this.showFieldValidation(input, false);
-        return false;
-    }
-};
-
-FormValidate.prototype.testInputEmail = function(input) {
-    const mailReg = new RegExp('^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$', 'gi');
-
-    if (!mailReg.test(input.value)) {
-        this.showFieldValidation(input, false);
-        return false;
-    } else {
-        this.showFieldValidation(input, true);
-        return true;
-    }
-};
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const cfg = {};
-    const form = new FormValidate(document.querySelector('.form'), cfg);
-});
-
-FormValidate.prototype.bindSubmit = function() {
-    this.form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        let formIsValidated = true;
-        const elements = this.form.querySelectorAll('[required]');
+        //jeżeli wszystkie pola są poprawne...
+        if (checkFieldsErrors(inputs)) {
+            const elements = form.querySelectorAll('input:not(:disabled), textarea:not(:disabled)');
 
-        [].forEach.call(elements, function(element) {
-            if (element.nodeName.toUpperCase() === 'INPUT') {
-                const type = element.type.toUpperCase();
+            const dataToSend = new FormData();
+            [...elements].forEach(el => dataToSend.append(el.name, el.value));
 
-                if (type === 'EMAIL') {
-                    if (!this.testInputEmail(element)) {
-                        formIsValidated = false;
+            const url = form.getAttribute('action');
+            const method = form.getAttribute('method');
+
+            const submit = form.querySelector('[type="submit"]');
+            submit.disabled = true;
+            submit.classList.add('element-is-busy');
+
+            fetch(url, {
+                method: method.toUpperCase(),
+                body: dataToSend
+            })
+            .then(ret => ret.json())
+            .then(ret => {
+                submit.disabled = false;
+                submit.classList.remove('element-is-busy');
+
+                if (ret.errors) {
+                    ret.errors.map(function(el) {
+                        return '[name="'+el+'"]'
+                    });
+                    const selector = ret.errors.join(',');
+                    checkFieldsErrors(form.querySelectorAll(sekector));
+
+                } else {
+                    if (ret.status === 'ok') {
+                        //wyświetlamy komunikat powodzenia, cieszymy sie
+                        const div = document.createElement('div');
+                        div.classList.add('form-send-success');
+
+                        div.innerHTML = '<strong>Wiadomość została wysłana</strong><span>Dziękujemy za kontakt. Postaramy się odpowiedzieć jak najszybciej</span>';
+                        form.parentElement.insertBefore(div, form);
+                        form.remove();
+                    }
+
+                    if (ret.status === 'error') {
+                        //komunikat błędu, niepowodzenia
+                        const div = document.createElement('div');
+                        div.classList.add('send-error');
+                        div.innerText = 'Wysłanie wiadomości się nie powiodło';
                     }
                 }
-            
-                if (type === 'TEXT') {
-                    if (!this.testInputText(element)) {
-                        formIsValidated = false;
-                    }
-                }
-        
-            }
-
-            if (element.nodeName.toUpperCase() === 'TEXTAREA') {
-                if (!this.testInputText(element)) {
-                    formIsValidated = false;
-                }
-            }
-            
-        }, this);
-
-        if (formIsValidated) {
-            e.target.submit();
-        } else {
-            return false;
+            }).catch(_ => {
+                submit.disabled = false;
+                submit.classList.remove('element-is-busy');
+            });
         }
-    }.bind(this));
-};
+    });
+}
