@@ -302,30 +302,27 @@
                     </ul>
                 </div>
                 <div class="section-contact__form">
-                    <form action="#" class="form" method="post">
-                        <div class="form__group">
-                            <input type="text" class="form__input" id='name' required placeholder='Imie i nazwisko'>
-                            <label for="name" class="form__label">Imię i nazwisko</label>
-
-                            <input type="email" class="form__input" id='email' required placeholder='Adres email'>
-                            <label for="email" class="form__label">Adres email</label>
+                    <form class="form" id="contactForm" method="post" action="/">
+                        <div class="form-row">
+                            <label for="field-name">Name*</label>
+                            <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
                         </div>
-                        <div class="form__group">
-                            <textarea name="comments" 
-                                        id="comments" 
-                                        class="form__textarea"
-                                        required 
-                                        placeholder="Napisz, która oferta Cię interesuje"
-                                        ></textarea>
+                        <div class="form-row">
+                            <label for="field-email">Email*</label>
+                            <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                        </div>
+                        <div class="form-row">
+                            <label for="field-message">Message*</label>
+                            <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message" pattern=".+"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="submit-btn">
+                                Wyślij
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="section-contact__button">
-                <button type="submit" class="button">
-                    Wyślij
-                </button>
-            </div> 
         </section>  
     </main>
     <footer class="footer bg-grey">

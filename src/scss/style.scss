@@ -113,8 +113,7 @@ html {
         } 
 
         &:hover {
-            color: rgba(255, 255, 255, 0.6); 
-            font-weight: bold; 
+            color: rgba(255, 255, 255, 0.7); 
         } 
     }
 
@@ -550,101 +549,94 @@ html {
     }
 }
 
+// Section contact form
+
 .section-contact__form {
     width: 65%;
 }
 
 .form {
-    &__group {
-        display: flex;
-        flex-wrap: no-wrap;
-        justify-content: space-between;
-        font-size: 1.4rem;
-        color: lightgrey;
-
-        @include respond(tab-port) {
-            flex-direction: column;
-        }
-
-    }
-
-    &__input {
-        width: 48%;
-        padding: 1%;
-        margin-bottom: 2rem;
-        border: 1px solid #BABABA;
-        border-radius: 4px;
-
-        @include respond(tab-port) {
-            width: 100%;
-        }
-
-        @include respond(phone) {
-            font-size: 1.7rem;
-        }
-        
-    }
-
-    &__label {
-        display: none;
-    }
-
-    &__textarea {
+    margin: 3rem auto;
+    font-family: sans-serif;
+    max-width: 40rem;
+}
+.form .form-row {
+    margin-bottom: 1rem;
+}
+.form .form-row:last-child {
+    margin-bottom: 0;
+}
+.form input[type=text],
+.form input[type=email],
+.form textarea,
+.form .checkbox-cnt .state {
+    box-shadow:inset 0 1px 5px rgba(0,0,0,0.07);
+}
+.form input[type=text],
+.form input[type=email],
+.form textarea {
+    border-radius: 0.2rem;
+    font-family: sans-serif;
+    padding: 0.8rem;
+    border: 1px solid #aaa;
+    display: block;
+    width: 100%;
+    color: #666;
+}
+.form input[type=text]:focus,
+.form input[type=email]:focus,
+.form textarea:focus {
+    border-color: #9DC9F5;
+    box-shadow: inset 0 0 0 1px #9DC9F5, inset 0 1px 5px rgba(0,0,0,0.07);
+    outline: none;
+}
+.form textarea {
+    height: 10rem;
+}
+.form label {
+    font-weight: bold;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.form .submit-btn {
+    font-family: sans-serif;
+    padding: 1rem 2rem;
+    background: #F15C5C;
+    border: 0;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s background-color;
+}
+@media screen and (max-width:500px) {
+    .form .submit-btn {
+        display: block;
         width: 100%;
-        height: 11rem;
-        border: 1px solid #BABABA;
-        border-radius: 4px;
-        padding: 1%;
-        resize: none;
-        font-family: 'Open Sans', sans-serif;
     }
 }
 
-.section-contact__button {
-    display: flex;
-    justify-content: flex-end;
 
-    @include respond(tab-port) {
-        justify-content: center;
-        padding-top: 5%;
-    }
-
-    .button {
-        font-size: 1.6rem;
-        padding: 1% 2%;
-        border: 1px solid #BABABA;
-        border-radius: 4px;
-        color: #e97645;
-        background-color: #fff;
-        letter-spacing: 2px;
-        transition: all .5s;
-
-        &:hover {
-            background-color: lightgray;
-            color: grey;
-        }
-    }
+/* ---------------------------------------------------- */
+/* Form validation */
+/* ---------------------------------------------------- */
+.form input[type=text].error,
+.form input[type=email].error,
+.form textarea.error,
+.form .checkbox-cnt input.error ~ .state {
+    border-color: #E01546;
 }
 
-// Error form
-
-form .error {
-    color:#DB083E;
-}
-.form .error input[type="text"],
-.form .error input[type="email"],
-.form .error textarea {
-    content: "\2713 ";
-    color: #DB083E;
-    border-color: #DB083E;
-    background: #FFEDED url(field-error.png) no-repeat;
-    background-position: calc(100% - 10px) center;
-    padding-right:40px;
-}
-.form .error textarea {
-    background-position: calc(100% - 10px) 10px;
+.field-error {
+    color: #E01546;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
 }
 
+
+
+// Section footer
 
 .footer {
     width: 100%;
