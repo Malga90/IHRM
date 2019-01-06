@@ -484,70 +484,6 @@ html {
     align-self: center;
 }
 
-// Contact section 
-
-
-.section-contact {
-    padding: 7% 9%;
-    font-family: 'Open Sans', sans-serif;
-
-    .heading-secondary {
-        text-align: center;
-        color: grey;
-        letter-spacing: 3px;
-        transition: all .3s;
-        
-
-        &:hover {
-            color: #e97645;
-            letter-spacing: 5px;
-        }
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding: 2% 0;
-        &:not(:first-child) {
-            line-height: 4rem;
-        }
-
-        @include respond(tab-port) {
-            flex-direction: column;
-            align-items: center;
-        
-        }
-    }
-
-    &__data {
-        color: grey;
-        font-size: 1.6rem; 
-
-        @include respond(tab-port) {
-            padding-bottom: 10%;
-        
-        }
-    }
-
-    &__paragraph {
-        font-weight: 700;
-    }
-
-    &__list {
-        list-style-type: none;
-        
-    }
-
-    &__item {
-        display: flex;
-        align-items: center;
-    }
-
-    &__icon {
-        color: #e97645;
-        margin-right: .6rem;
-    }
-}
 
 // Contact section 
 
@@ -674,6 +610,7 @@ html {
     }
 
     .button {
+        margin-top: 3rem;
         font-size: 1.6rem;
         padding: 1% 2%;
         border: 1px solid #BABABA;
