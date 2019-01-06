@@ -398,20 +398,22 @@ html {
     margin-right: .6rem; }
 
 .section-contact__form {
-  width: 65%; }
+  width: 55%; }
 
 .form__group {
   display: flex;
-  flex-wrap: no-wrap;
   justify-content: space-between;
-  font-size: 1.4rem;
+  flex: 1; }
+
+.form__row {
+  align-self: stretch;
+  font-size: 1.5rem;
   color: lightgrey; }
   @media (max-width: 56.25em) {
-    .form__group {
+    .form__row {
       flex-direction: column; } }
 
 .form__input {
-  width: 48%;
   padding: 1%;
   margin-bottom: 2rem;
   border: 1px solid #BABABA;

@@ -551,15 +551,20 @@ html {
 }
 
 .section-contact__form {
-    width: 65%;
+    width: 55%;
 }
 
 .form {
+    
     &__group {
         display: flex;
-        flex-wrap: no-wrap;
         justify-content: space-between;
-        font-size: 1.4rem;
+        flex: 1;
+    }
+
+    &__row {
+        align-self: stretch;
+        font-size: 1.5rem;
         color: lightgrey;
 
         @include respond(tab-port) {
@@ -569,11 +574,11 @@ html {
     }
 
     &__input {
-        width: 48%;
         padding: 1%;
         margin-bottom: 2rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
+    
 
         @include respond(tab-port) {
             width: 100%;
