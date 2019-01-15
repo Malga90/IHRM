@@ -559,13 +559,14 @@ html {
     &__group {
         display: flex;
         justify-content: space-between;
-        flex: 1;
     }
 
     &__row {
-        align-self: stretch;
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: lightgrey;
+        flex: 1;
+        margin-right: 3%;
+
 
         @include respond(tab-port) {
             flex-direction: column;
@@ -574,11 +575,13 @@ html {
     }
 
     &__input {
-        padding: 1%;
+        padding: 3%;
         margin-bottom: 2rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
-    
+        width: 100%;
+        margin-right: 3%;
+        
 
         @include respond(tab-port) {
             width: 100%;
@@ -599,7 +602,7 @@ html {
         height: 11rem;
         border: 1px solid #BABABA;
         border-radius: 4px;
-        padding: 1%;
+        padding: 2%;
         resize: none;
         font-family: 'Open Sans', sans-serif;
     }
@@ -608,6 +611,7 @@ html {
 .section-contact__button {
     display: flex;
     justify-content: flex-end;
+    margin-right: 3%;
 
     @include respond(tab-port) {
         justify-content: center;
@@ -616,8 +620,8 @@ html {
 
     .button {
         margin-top: 3rem;
-        font-size: 1.6rem;
-        padding: 1% 2%;
+        font-size: 1.5rem;
+        padding: 2% 4%;
         border: 1px solid #BABABA;
         border-radius: 4px;
         color: #e97645;
