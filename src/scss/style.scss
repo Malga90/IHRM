@@ -655,6 +655,16 @@ form .error {
     background-position: calc(100% - 10px) 10px;
 }
 
+.error-message {
+    color: #DB083E;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
 
 // Section footer
 
