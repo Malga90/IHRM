@@ -229,6 +229,7 @@ FormValidate.prototype.showFieldValidation = function(input, inputIsValid) {
     
     } else {
         input.parentElement.classList.remove(this.options.classError);
+        input.parentElement.children[2].classList.add(this.options.errorMessageHidden);
     }
 };
 
@@ -316,31 +317,3 @@ FormValidate.prototype.bindSubmit = function() {
 
 
 };
-
-
-document.querySelector('form').addEventListener('keyup', function() {
-
-    const form = document.querySelector('form');
-    const elements = form.querySelectorAll('[required]');
-    const submitBtn = form.querySelector('button');
-    
-    
-    elements.forEach(function(el) {
-        if (el.parentElement.classList.contains('error')) {
-            submitBtn.disabled = true;
-            return false;
-        } else if (!el.parentElement.classList.contains('error')) {
-            submitBtn.disabled = false;//removeAttribute("disabled");
-        }
-        // console.log('else')
-        //     submitBtn.disabled = false;//removeAttribute("disabled");
-    });
-});
-
-
-// event change
-// get inputs
-// condition when input has class error
-// set attribute disabled
-// else
-// remove attribute disabled

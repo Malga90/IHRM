@@ -634,6 +634,11 @@ html {
             color: grey;
         }
     }
+
+    .disabled {
+        opacity: 0.65; 
+        cursor: not-allowed;
+    }
 }
 
 // Error form
@@ -657,10 +662,9 @@ form .error {
 
 .error-message {
     color: #DB083E;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     display: block;
-    text-align: center;
-    margin-top: -1rem;
+    margin-top: -2rem;
     margin-bottom: 1rem;
 }
 
