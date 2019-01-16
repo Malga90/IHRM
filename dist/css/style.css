@@ -437,7 +437,8 @@ html {
   border-radius: 4px;
   padding: 2%;
   resize: none;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2rem; }
 
 .section-contact__button {
   display: flex;
@@ -448,7 +449,6 @@ html {
       justify-content: center;
       padding-top: 5%; } }
   .section-contact__button .button {
-    margin-top: 3rem;
     font-size: 1.5rem;
     padding: 2% 4%;
     border: 1px solid #BABABA;
@@ -470,7 +470,7 @@ form .error {
   content: "\2713 ";
   color: #DB083E;
   border-color: #DB083E;
-  background: #FFEDED url(field-error.png) no-repeat;
+  background: #FFEDED;
   background-position: calc(100% - 10px) center;
   padding-right: 40px; }
 
