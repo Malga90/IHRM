@@ -307,13 +307,13 @@
                                 <div class="form__row">
                                     <input type="text" class="form__input" id='name' required placeholder='Imie i nazwisko'>
                                     <label for="name" class="form__label">Imię i nazwisko</label>
+                                    <div class="error-message hidden">Podaj imie i nazwisko</div>
                                 </div>
-                                <div class="error-message hidden">Wypełnij to pole</div>
                                 <div class="form__row">
                                     <input type="email" class="form__input" id='email' data-error="Wypełnij to pole" required placeholder='Adres email'>
                                     <label for="email" class="form__label">Adres email</label>
+                                    <div class="error-message hidden">Podaj poprawny adres e-mail</div>
                                 </div>
-                                <div class="error-message hidden">Wypełnij to pole</div> 
                         </div>
                         <div class="form__row">
                             <textarea name="comments" 
@@ -323,8 +323,9 @@
                                         data-error="Wypełnij to pole" 
                                         placeholder="Napisz, która oferta Cię interesuje"
                                         ></textarea>
+                            <label for="field_message" class="form__label">Wiadomosc</label>
+                            <div class="error-message hidden">Wypełnij to pole</div>
                         </div>
-                        <div class="error-message hidden">Wypełnij to pole</div>
                         <div class="section-contact__button">
                             <button type="submit" class="button">
                                 Wyślij

@@ -479,8 +479,11 @@ form .error {
 
 .error-message {
   color: #DB083E;
-  font-size: 1.2rem;
-  display: block; }
+  font-size: 1.4rem;
+  display: block;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem; }
 
 .hidden {
   display: none; }

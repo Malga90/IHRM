@@ -179,7 +179,7 @@ const slide = new Slider('#slider', {
 const FormValidate = function(form, options) {
     const defaultOptions = {
         classError : 'error',
-        errorMessageHidden : 'hidden'
+        errorMessageHidden : 'hidden',
     }
 
     this.form = form;
@@ -225,7 +225,8 @@ FormValidate.prototype.prepareElements = function() {
 FormValidate.prototype.showFieldValidation = function(input, inputIsValid) {
     if (!inputIsValid) {
         input.parentElement.classList.add(this.options.classError);
-        input.parentNode.nextElementSibling.classList.remove(this.options.errorMessageHidden);
+        input.parentElement.children[2].classList.remove(this.options.errorMessageHidden);
+    
     } else {
         input.parentElement.classList.remove(this.options.classError);
     }
